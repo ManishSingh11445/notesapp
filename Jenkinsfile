@@ -3,7 +3,9 @@ agent any
 stages {
 stage("build docker image"){
 steps{
-echo "building the app"
+  script {
+    sh "docker build -t nodesapp:1.0 ."
+  }
 }
 }
 
